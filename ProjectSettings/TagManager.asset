@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Heart
   layers:
   - Default
   - TransparentFX
@@ -13,13 +14,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - UnitLeft
+  - ProjectileLeft
+  - UnitRight
+  - ProjectileRight
+  - SelectionBox
+  - HeartLeft
+  - HeartRight
   - 
   - 
   - 

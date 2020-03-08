@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{7B3333BA-C0CF-E1E9-39CC-5EA4FF443B9A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/SwordController.cs" Line="56" Column="10" />
+      <File FileName="Assets/Scripts/Projectile.cs" Line="29" Column="76" />
+      <File FileName="Assets/Scripts/SelectionBox.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="7" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Untitled Bug Game" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="PlayerController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="beb615a7-6f7b-4cac-9928-62a3848f3f78" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
