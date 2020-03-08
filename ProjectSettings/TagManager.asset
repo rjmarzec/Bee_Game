@@ -14,13 +14,13 @@ TagManager:
   - UI
   - 
   - 
-  - UnitLeft
   - ProjectileLeft
-  - UnitRight
   - ProjectileRight
+  - UnitLeft
+  - UnitRight
   - SelectionBox
-  - HeartLeft
-  - HeartRight
+  - 
+  - 
   - 
   - 
   - 

@@ -52,7 +52,7 @@ public class SelectionBox : MonoBehaviour
             if(currentUnit != null)
             {
                 unitAlive = true;
-                gameObject.GetComponent<Renderer>().enabled = true;
+                gameObject.GetComponent<Renderer>().enabled = false;
             }
         }
     }

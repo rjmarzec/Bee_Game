@@ -12,7 +12,6 @@ public class Heart : Unit
         if (health <= 0)
         {
             Destroy(gameObject);
-
             // Stop the game after a heart is destroyed
             Time.timeScale = 0;
         }
