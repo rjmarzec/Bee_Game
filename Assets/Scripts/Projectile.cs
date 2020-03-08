@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public int damage = 10;
+
     Rigidbody2D rigidbody2d;
 
     void Awake()
@@ -11,6 +13,7 @@ public class Projectile : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
+    // Launch the projectile with the given parameters
     public void Launch(Vector2 direction, float force)
     {
         rigidbody2d.AddForce(direction * force);
@@ -18,6 +21,7 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
+        // Destory the projectile if it is far off the screen
         if (transform.position.magnitude > 1000.0f)
         {
             Destroy(gameObject);
@@ -26,16 +30,11 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        SwordController e = other.collider.GetComponent<SwordController>();
-        if (e != null)
+        // On collision with a unit, deal damage and destroy the projectile
+        Unit unit = other.collider.GetComponent<Unit>();
+        if(unit != null)
         {
-            e.Damage(10);
-            Destroy(gameObject);
-        }
-        PlayerController h = other.collider.GetComponent<PlayerController>();
-        if (h != null)
-        {
-            h.Damage(10);
+            unit.Damage(damage);
             Destroy(gameObject);
         }
     }

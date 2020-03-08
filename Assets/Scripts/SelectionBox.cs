@@ -5,7 +5,7 @@ using UnityEngine;
 public class SelectionBox : MonoBehaviour
 {
     public GameObject swordGuyPrefab;
-    public GameObject redBulletPrefab;
+    public GameObject bowGuyPrefab;
 
     Rigidbody2D rigidbody2d;
     GameObject currentUnit;
@@ -21,23 +21,38 @@ public class SelectionBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Check to see if the summoned unit is still alive
         unitAlive = currentUnit != null;
+
+        // Show the selection box if a unit is not currently summoned on it
+        if(!unitAlive)
+        {
+            gameObject.GetComponent<Renderer>().enabled = true;
+        }
     }
 
     private void OnMouseDown()
     {
         if(!unitAlive)
         {
-            // Summon a sword_guy
-            if (Input.GetMouseButtonDown(0))
+            // Summon a bow_guy
+            // Right clicking on a Macbook trackpad doesn't work for some reason, so
+            //      this chunky if statement lets you ctrl + left click instead.
+            if (Input.GetMouseButtonDown(1) || (Input.GetKey("left ctrl") && Input.GetMouseButtonDown(0)))
             {
-                unitAlive = true;
+                currentUnit = Instantiate(bowGuyPrefab, rigidbody2d.position, Quaternion.identity);
+            }
+            // Summon a sword_guy
+            else if (Input.GetMouseButtonDown(0))
+            {
                 currentUnit = Instantiate(swordGuyPrefab, rigidbody2d.position, Quaternion.identity);
             }
-            // Summon a bow_guy
-            if (Input.GetMouseButtonDown(1))
+
+            // If a unit was just summoned, hide the selection box
+            if(currentUnit != null)
             {
-                // Will do later
+                unitAlive = true;
+                gameObject.GetComponent<Renderer>().enabled = true;
             }
         }
     }
