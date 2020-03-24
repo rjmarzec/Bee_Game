@@ -95,10 +95,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcfb5c47befe422bae77aa048cbb2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordGuyPrefab: {fileID: 2749572327691756319, guid: 59b937e73e0b1432eb9090cd482a44f9,
+  unit1Prefab: {fileID: 1022939209106839421, guid: 43e2325425dce45db98e886378debca0,
     type: 3}
-  bowGuyPrefab: {fileID: 1022939209106839421, guid: 43e2325425dce45db98e886378debca0,
+  unit2Prefab: {fileID: 2749572327691756319, guid: 59b937e73e0b1432eb9090cd482a44f9,
     type: 3}
+  unit3Prefab: {fileID: 8363831151868030333, guid: 34b947686b95342b2a21e205ba68f559,
+    type: 3}
+  unit4Prefab: {fileID: 7161180269590546754, guid: d3ec66f97b6794090a5f26f3ca6045f0,
+    type: 3}
+  unit5Prefab: {fileID: 4772571463924930694, guid: 1ae1c5e01492f4b11928e41c41873f21,
+    type: 3}
+  unit6Prefab: {fileID: 6957862514557017287, guid: 3dc583502f46d4c39b83ad52b47dadc2,
+    type: 3}
+  selectionBoxKey: 0
+  isLeftSideBox: 1
 --- !u!61 &5103507613366645572
 BoxCollider2D:
   m_ObjectHideFlags: 0

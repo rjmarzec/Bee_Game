@@ -8,7 +8,9 @@ public class Unit : MonoBehaviour
     public int health = 50;
     public float attackCooldown = 1.0f;
 
-    public GameObject projectilePrefab;
+    public GameObject projectilePrefabLeft;
+    public GameObject projectilePrefabRight;
+    GameObject projectilePrefab;
     public int projectileForce = 300;
 
     Rigidbody2D rigidbody2d;
@@ -21,11 +23,16 @@ public class Unit : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         lookDirection = new Vector2(direction, 0);
         attackTimer = attackCooldown;
+        projectilePrefab = projectilePrefabLeft;
 
         // Flip the direction the unit is facing if they are on the right side
         if (direction == -1)
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
+            projectilePrefab = projectilePrefabRight;
+
+            // Change the layer of the unit so it doesn't hit itself
+            gameObject.layer = LayerMask.NameToLayer("UnitRight");
         }
     }
 
@@ -54,7 +61,7 @@ public class Unit : MonoBehaviour
     }
 
     // When called, launch a projectile from the unit, as specified by
-    //      the public variables of unit.
+    // the public variables of unit.
     public void Attack()
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position, Quaternion.identity);
