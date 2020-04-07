@@ -62,7 +62,7 @@ public class Unit : MonoBehaviour
 
     // When called, launch a projectile from the unit, as specified by
     // the public variables of unit.
-    public void Attack()
+    virtual public void Attack()
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position, Quaternion.identity);
         Projectile projectile = projectileObject.GetComponent<Projectile>();
@@ -71,7 +71,7 @@ public class Unit : MonoBehaviour
     }
 
     // Take damage. It's as simple as that.
-    public void Damage(int damageTaken)
+    virtual public void Damage(int damageTaken)
     {
         health -= damageTaken;
     }

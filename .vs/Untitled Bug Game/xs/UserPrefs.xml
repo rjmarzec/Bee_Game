@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{7B3333BA-C0CF-E1E9-39CC-5EA4FF443B9A}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Unit.cs">
     <Files>
-      <File FileName="Assets/Scripts/Projectile.cs" Line="8" Column="1" />
-      <File FileName="Assets/Scripts/SelectionBox.cs" />
-      <File FileName="Assets/Scripts/Unit.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/Unit.cs" Line="10" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/Projectile.cs" />
+      <File FileName="Assets/Scripts/SelectionBox.cs" Line="122" Column="67" />
       <File FileName="Assets/Scripts/Heart.cs" />
     </Files>
     <Pads>
@@ -22,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f945870f-2765-4d36-9177-ab4ff2fdfb71" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2757ef24-2481-4705-93ea-f14b2080cc5f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

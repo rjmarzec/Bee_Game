@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SelectionBox : MonoBehaviour
 {
+    // Public Variables for Units
     public GameObject unit1Prefab;
     public GameObject unit2Prefab;
     public GameObject unit3Prefab;
     public GameObject unit4Prefab;
     public GameObject unit5Prefab;
     public GameObject unit6Prefab;
+
     public KeyCode selectionBoxKey;
     public bool isLeftSideBox;
 
@@ -31,6 +33,7 @@ public class SelectionBox : MonoBehaviour
 
         unitPrefabs = new List<GameObject> { unit1Prefab, unit2Prefab, unit3Prefab, unit4Prefab, unit5Prefab, unit6Prefab };
 
+        // Set the keys that the player on each side interacts with
         if (isLeftSideBox)
             unitKeys = new List<KeyCode> { KeyCode.Q, KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.Z, KeyCode.X };
         else
@@ -49,6 +52,7 @@ public class SelectionBox : MonoBehaviour
             gameObject.GetComponent<Renderer>().enabled = true;
         }
 
+        // Check to see if the player wants to place a unit somewhere
         checkInput();
 
     }
@@ -57,6 +61,7 @@ public class SelectionBox : MonoBehaviour
     {
         if(!unitSelected)
         {
+            // Check to see if the player made some input that we need to do something with
             for(int i = 0; i < 6; i ++)
             {
                 if(unitSelected = Input.GetKeyDown(unitKeys[i]))
@@ -68,12 +73,17 @@ public class SelectionBox : MonoBehaviour
         }
         else if(unitSelected)
         {
-            // Check all the related keys to see 
+            // Check all the selection keys to see if the player selected something
             for(int i = 0; i < 6; i ++)
             {
                 if(Input.GetKeyDown(unitKeys[i]))
                 {
+                    // If any unit is tried to be placed on any tile of the same side,
+                    // go back to checking for a unit instead
                     unitSelected = false;
+
+                    // Only summon the unit corresponding to the key pressed and only if
+                    // a unit is not summoned on that spot already
                     if(unitKeys[i] == selectionBoxKey && (currentUnit == null || currentUnit.GetComponent<Unit>().health <= 0))
                     {
                         // Summon the unit of the selected key
@@ -85,12 +95,9 @@ public class SelectionBox : MonoBehaviour
                             currentUnit.GetComponent<Unit>().direction = -1;
                         }
 
-                        // If a unit was just summoned, hide the selection box
-                        if (currentUnit != null)
-                        {
-                            unitAlive = true;
-                            gameObject.GetComponent<Renderer>().enabled = false;
-                        }
+                        // Hide the selection box since the unit was just summoned
+                        unitAlive = true;
+                        gameObject.GetComponent<Renderer>().enabled = false;
 
                         // Don't summon any more units
                         break;
