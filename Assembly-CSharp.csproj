@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\HideShowHoney.cs" />
     <Compile Include="Assets\Scripts\HideShowUnit.cs" />
     <Compile Include="Assets\Scripts\Menus\EscapeToMainMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\ExitGame.cs" />
     <Compile Include="Assets\Scripts\Menus\HowToButton.cs" />
     <Compile Include="Assets\Scripts\Menus\PlayButton.cs" />
     <Compile Include="Assets\Scripts\Menus\ShowEscape.cs" />
