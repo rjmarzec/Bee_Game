@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BeeFlower
     - EscapeToMainMenu
-    - ExitGame
     - FlowerCounter
     - GlobalVariables
     - Heart
@@ -138,8 +137,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 10906}
     - Class: 114
       Script: {instanceID: 11094}
     - Class: 114
