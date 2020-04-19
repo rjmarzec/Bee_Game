@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7B3333BA-C0CF-E1E9-39CC-5EA4FF443B9A}</ProjectGuid>
+    <ProjectGuid>{624BBE9B-4258-D176-299E-D1CDF9A2DE28}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,42 +64,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BeeFlower.cs" />
+    <Compile Include="Assets\Scripts\FlowerCounter.cs" />
+    <Compile Include="Assets\Scripts\GlobalVariables.cs" />
     <Compile Include="Assets\Scripts\Heart.cs" />
+    <Compile Include="Assets\Scripts\HideShowHoney.cs" />
+    <Compile Include="Assets\Scripts\HideShowUnit.cs" />
+    <Compile Include="Assets\Scripts\Menus\EscapeToMainMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\HowToButton.cs" />
+    <Compile Include="Assets\Scripts\Menus\PlayButton.cs" />
+    <Compile Include="Assets\Scripts\Menus\ShowEscape.cs" />
+    <Compile Include="Assets\Scripts\Menus\ShowP1Win.cs" />
+    <Compile Include="Assets\Scripts\Menus\ShowP2Win.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\SelectionBox.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/rjmarzec/Development/UnityProjects/Untitled Bug Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/rjmarzec/Development/UnityProjects/Bee Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

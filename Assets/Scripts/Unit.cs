@@ -16,6 +16,7 @@ public class Unit : MonoBehaviour
     Rigidbody2D rigidbody2d;
     Vector2 lookDirection;
     float attackTimer;
+    AudioSource m_MyAudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,8 @@ public class Unit : MonoBehaviour
         lookDirection = new Vector2(direction, 0);
         attackTimer = attackCooldown;
         projectilePrefab = projectilePrefabLeft;
+
+        m_MyAudioSource = GetComponent<AudioSource>();
 
         // Flip the direction the unit is facing if they are on the right side
         if (direction == -1)
@@ -74,5 +77,7 @@ public class Unit : MonoBehaviour
     virtual public void Damage(int damageTaken)
     {
         health -= damageTaken;
+
+        m_MyAudioSource.Play();
     }
 }

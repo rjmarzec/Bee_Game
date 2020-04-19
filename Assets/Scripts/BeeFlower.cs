@@ -10,6 +10,13 @@ public class BeeFlower : Unit
     {
         // The flower bee generates resource rather than shooting projectiles
 
-        // There is no resource gen now, so we just do nothing for now
+        if(direction >= 0)
+        {
+            GlobalVariables.IncLeftHoneyCount();
+        }
+        else
+        {
+            GlobalVariables.IncRightHoneyCount();
+        }
     }
 }

@@ -37,7 +37,7 @@ public class SelectionBox : MonoBehaviour
         if (isLeftSideBox)
             unitKeys = new List<KeyCode> { KeyCode.Q, KeyCode.W, KeyCode.A, KeyCode.S, KeyCode.Z, KeyCode.X };
         else
-            unitKeys = new List<KeyCode> { KeyCode.LeftBracket, KeyCode.RightBracket, KeyCode.Semicolon, KeyCode.Quote, KeyCode.Period, KeyCode.Slash };
+            unitKeys = new List<KeyCode> { KeyCode.RightBracket, KeyCode.LeftBracket, KeyCode.Quote, KeyCode.Semicolon, KeyCode.Slash, KeyCode.Period};
     }
 
     // Update is called once per frame
@@ -67,6 +67,14 @@ public class SelectionBox : MonoBehaviour
                 if(unitSelected = Input.GetKeyDown(unitKeys[i]))
                 {
                     unitType = unitPrefabs[i];
+                    if(isLeftSideBox)
+                    {
+                        GlobalVariables.leftSelectedUnit = i + 1;
+                    }
+                    else
+                    {
+                        GlobalVariables.rightSelectedUnit = i + 1;
+                    }
                     break;
                 }
             }
@@ -82,10 +90,38 @@ public class SelectionBox : MonoBehaviour
                     // go back to checking for a unit instead
                     unitSelected = false;
 
+                    // De-highlight the unit summoned
+                    if (isLeftSideBox)
+                    {
+                        GlobalVariables.leftSelectedUnit = -1;
+                    }
+                    else
+                    {
+                        GlobalVariables.rightSelectedUnit = -1;
+                    }
+
                     // Only summon the unit corresponding to the key pressed and only if
                     // a unit is not summoned on that spot already
-                    if(unitKeys[i] == selectionBoxKey && (currentUnit == null || currentUnit.GetComponent<Unit>().health <= 0))
+                    if (unitKeys[i] == selectionBoxKey && (currentUnit == null || currentUnit.GetComponent<Unit>().health <= 0))
                     {
+                        // Check if we have the currency to buy the unit
+                        // Check the left side if we are on it
+                        if(isLeftSideBox)
+                        {
+                            if (!GlobalVariables.payLeftHoneyCount(1 + unitPrefabs.IndexOf(unitType)))
+                            {
+                                break;
+                            }
+                        }
+                        // Otherwise check the right side
+                        else
+                        {
+                            if (!GlobalVariables.payRightHoneyCount(1 + unitPrefabs.IndexOf(unitType)))
+                            {
+                                break;
+                            }
+                        }
+
                         // Summon the unit of the selected key
                         currentUnit = Instantiate(unitType, rigidbody2d.position, Quaternion.identity);
 
@@ -102,9 +138,7 @@ public class SelectionBox : MonoBehaviour
                         // Don't summon any more units
                         break;
                     }
-
                 }
-
             }
         }
     }
