@@ -143,8 +143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  health: 200
+  health: 250
   attackCooldown: -1
   projectilePrefabLeft: {fileID: 0}
   projectilePrefabRight: {fileID: 0}
   projectileForce: 300
+  winnerText: {fileID: 0}
+  escapeText: {fileID: 0}

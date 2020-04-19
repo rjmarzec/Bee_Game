@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  health: 30
+  health: 50
   attackCooldown: 5
   projectilePrefabLeft: {fileID: 5569641200287316968, guid: 269146e017a844fd4a07e2736e75b164,
     type: 3}

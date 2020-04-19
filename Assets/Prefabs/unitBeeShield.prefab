@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 1
   health: 100
-  attackCooldown: 2
+  attackCooldown: 3
   projectilePrefabLeft: {fileID: 5569641200287316968, guid: 269146e017a844fd4a07e2736e75b164,
     type: 3}
   projectilePrefabRight: {fileID: 4262377178211686371, guid: 5ad2e0900c88c49dca895b2d7938fb3f,
