@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BeeFlower
     - EscapeToMainMenu
+    - ExitGame
     - FlowerCounter
     - GlobalVariables
     - Heart
@@ -19,11 +20,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -60,25 +56,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9814}
+      Script: {instanceID: 9812}
     - Class: 114
-      Script: {instanceID: 10024}
+      Script: {instanceID: 10022}
     - Class: 114
-      Script: {instanceID: 10278}
+      Script: {instanceID: 10276}
     - Class: 114
-      Script: {instanceID: 10516}
+      Script: {instanceID: 10514}
     - Class: 114
-      Script: {instanceID: 10818}
+      Script: {instanceID: 10816}
     - Class: 114
-      Script: {instanceID: 10870}
+      Script: {instanceID: 10868}
     - Class: 114
-      Script: {instanceID: 11084}
+      Script: {instanceID: 11082}
     - Class: 114
-      Script: {instanceID: 11160}
+      Script: {instanceID: 11158}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 11556}
+      Script: {instanceID: 11554}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -107,7 +103,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10818}
+      Script: {instanceID: 10816}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -138,9 +134,11 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11094}
+      Script: {instanceID: 10904}
     - Class: 114
-      Script: {instanceID: 11398}
+      Script: {instanceID: 11092}
+    - Class: 114
+      Script: {instanceID: 11396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -665,4 +663,5 @@ ScriptsOnlyBuild:
   - Assets/MainScreen.unity
   - Assets/InstructionsScreen.unity
   - Assets/BattleScreen.unity
-  playerPath: /Users/rjmarzec/Development/UnityProjects/Bee Game/Builds/Mac/Bee Game.app
+  playerPath: C:/Users/Robert Marzec/Desktop/Development/Projects/Bee Game/Builds/Mac/Bee
+    Game.app
